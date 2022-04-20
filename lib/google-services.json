@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "47289857767",
+    "project_id": "buny-chat",
+    "storage_bucket": "buny-chat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:47289857767:android:e52133707f566995fd1442",
+        "android_client_info": {
+          "package_name": "com.YordiColina.buny_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "47289857767-8ua38vt1eulvmqtp5gh8dhqnhsdbi1jr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAd9dtfYwAtPTQqZm7DRJaBDDRKB3Cx0M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "47289857767-8ua38vt1eulvmqtp5gh8dhqnhsdbi1jr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

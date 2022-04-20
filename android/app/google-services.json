@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "1090349896338",
+    "project_id": "plass-79948",
+    "storage_bucket": "plass-79948.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1090349896338:android:ff2b068fd5f9b05b838c4b",
+        "android_client_info": {
+          "package_name": "com.yordi.prueba"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1090349896338-rqg62kf0pbdaaps7pd5h5aakguji1jpe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkc7T-xec6XuGiVwazx9XFBHGiDbCncJE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1090349896338-rqg62kf0pbdaaps7pd5h5aakguji1jpe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1090349896338:android:12986657e30b247c838c4b",
+        "android_client_info": {
+          "package_name": "com.yordi.pruebab"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1090349896338-rqg62kf0pbdaaps7pd5h5aakguji1jpe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkc7T-xec6XuGiVwazx9XFBHGiDbCncJE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1090349896338-rqg62kf0pbdaaps7pd5h5aakguji1jpe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
