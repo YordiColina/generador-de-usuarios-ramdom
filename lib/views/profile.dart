@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:pruebab/helper/helperfunctions.dart';
 import 'package:pruebab/services/database.dart';
 
-import '../modal/DataUsers.dart';
+
+import '../models/DataUsers.dart';
 import '../widget.dart';
 
 

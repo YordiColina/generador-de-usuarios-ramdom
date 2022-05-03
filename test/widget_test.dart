@@ -1,30 +1,62 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
 
 import 'package:flutter/material.dart';
+
 import 'package:flutter_test/flutter_test.dart';
 
+import 'package:get/get.dart';
+import 'package:mockito/mockito.dart';
 import 'package:pruebab/main.dart';
+import 'package:pruebab/models/user.dart';
+import 'package:pruebab/repository/user_repository.dart';
+
+import 'controller_test/user_controller_test.mocks.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
+  const user1 = User('Yordi', 'Colina', 'Taiwan', null);
+  const user2 = User('Juan', 'Camaney', 'Japon', null);
+  const user3 = User('Carlos', 'Caguamas', 'Korea', null);
+
+  late MockUserRepository mockRepo;
+
+  setUp(() {
+    Get.reset();
+    mockRepo = MockUserRepository();
+
+    when(mockRepo.getAllUsers()).thenAnswer((_) async => [user1, user2]);
+    when(mockRepo.getNewUser()).thenAnswer((_) async => user3);
+    when(mockRepo.deleteUser(any)).thenAnswer((_) async => true);
+
+    Get.put<UserRepository>(mockRepo);
+  });
+
+  testWidgets('Two row of users when app start', (WidgetTester tester) async {
     await tester.pumpWidget(const MyApp());
+    await tester.pumpAndSettle();
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    expect(find.byType(Card), findsNWidgets(2));
+  });
 
-    // Tap the '+' icon and trigger a frame.
+  testWidgets('New user is added correctly', (WidgetTester tester) async {
+    await tester.pumpWidget(const MyApp());
+    await tester.pumpAndSettle();
+
+    expect(find.byType(Card), findsNWidgets(2));
+
     await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+    await tester.pumpAndSettle();
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    expect(find.byType(Card), findsNWidgets(3));
+  });
+
+  testWidgets('User is deleted correctly', (WidgetTester tester) async {
+    await tester.pumpWidget(const MyApp());
+    await tester.pumpAndSettle();
+
+    expect(find.byType(Card), findsNWidgets(2));
+
+    await tester.tap(find.byIcon(Icons.delete).first);
+    await tester.pumpAndSettle();
+
+    expect(find.byType(Card), findsNWidgets(1));
   });
 }

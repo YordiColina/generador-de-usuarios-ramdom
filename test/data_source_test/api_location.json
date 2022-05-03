@@ -1,0 +1,30 @@
+{
+  "results": [
+    {
+      "location": {
+        "street": {
+          "number": 6639,
+          "name": "Maple Ave"
+        },
+        "city": "Red Rock",
+        "state": "Ontario",
+        "country": "Canada",
+        "postcode": "S9X 0C9",
+        "coordinates": {
+          "latitude": "-61.4279",
+          "longitude": "-141.1070"
+        },
+        "timezone": {
+          "offset": "+4:00",
+          "description": "Abu Dhabi, Muscat, Baku, Tbilisi"
+        }
+      }
+    }
+  ],
+  "info": {
+    "seed": "6053f04455ab963d",
+    "results": 1,
+    "page": 1,
+    "version": "1.3"
+  }
+}

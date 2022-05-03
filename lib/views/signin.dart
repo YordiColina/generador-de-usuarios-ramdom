@@ -6,7 +6,8 @@ import 'package:pruebab/views/profile.dart';
 import 'package:pruebab/views/signup.dart';
 
 import '../helper/helperfunctions.dart';
-import '../modal/DataUsers.dart';
+
+import '../models/DataUsers.dart';
 import '../services/auth.dart';
 import '../services/database.dart';
 import '../widget.dart';
@@ -90,7 +91,7 @@ class _signinState extends State<signin> {
       ),
     body: SingleChildScrollView(
       child: Container(
-        height: MediaQuery.of(context).size.height - 50,
+        height: MediaQuery.of(context).size.height,
         alignment: Alignment.bottomCenter,
         child: Container(
           padding: EdgeInsets.symmetric(horizontal: 24),

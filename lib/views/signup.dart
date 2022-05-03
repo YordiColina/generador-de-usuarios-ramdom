@@ -4,7 +4,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import'package:flutter/material.dart';
 import 'package:pruebab/helper/authenticate.dart';
-import 'package:pruebab/modal/DataUsers.dart';
+
 import 'package:pruebab/views/profile.dart';
 import 'package:pruebab/views/signin.dart';
 

@@ -2,7 +2,11 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 
-import '../modal/usuario.dart';
+import '../models/usuario.dart';
+
+
+
+
 class AuthMethods {
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
